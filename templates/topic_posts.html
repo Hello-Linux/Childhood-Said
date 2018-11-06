@@ -13,7 +13,7 @@
 {% block content %}
 
   <div class="mb-4">
-    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">Reply</a>
+    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">回复</a>
   </div>
 
   {% for post in posts %}
@@ -25,7 +25,7 @@
         <div class="row">
           <div class="col-2">
             <img src="{{ post.created_by|gravatar }}" alt="{{ post.created_by.username }}" class="w-100 rounded">
-            <small>Posts: {{ post.created_by.posts.count }}</small>
+            <small>总回复次数: {{ post.created_by.posts.count }}</small>
           </div>
           <div class="col-10">
             <div class="row mb-3">
@@ -43,7 +43,7 @@
               <div class="mt-3">
                 <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}"
                    class="btn btn-primary btn-sm"
-                   role="button">Edit</a>
+                   role="button">编辑</a>
               </div>
             {% endif %}
           </div>

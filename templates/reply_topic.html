@@ -27,7 +27,7 @@
   <form method="post" class="mb-4" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Post a reply</button>
+    <button type="submit" class="btn btn-success">提交回复</button>
   </form>
 
   {% for post in topic.get_last_ten_posts %}
