@@ -59,9 +59,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'childhood',
+        'USER': 'root',
+        'PASSWORD': '1qaz@WSX',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+     }
 }
 
 
