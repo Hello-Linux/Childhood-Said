@@ -9,27 +9,27 @@
 {% block content %}
   <table class="table">
     <thead class="thead-inverse">
-      <tr>
-        <th>童年板块</th>
-        <th>回复数</th>
-        <th>主题数</th>
-        <th>最近提交</th>
+			<tr>
+        <th style="background-color:green">童年板块</th>
+        <th style="background-color:green">回复数</th>
+        <th style="background-color:green">主题数</th>
+        <th style="background-color:green">最近提交</th>
       </tr>
     </thead>
     <tbody>
       {% for board in boards %}
         <tr>
-          <td>
+          <td bgcolor="pink">
             <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
             <small class="text-muted d-block">{{ board.description }}</small>
           </td>
-          <td class="align-middle">
+          <td bgcolor="pink" class="align-middle">
             {{ board.get_posts_count }}
           </td>
-          <td class="align-middle">
+          <td bgcolor="pink" class="align-middle">
             {{ board.topics.count }}
           </td>
-          <td class="align-middle">
+          <td bgcolor="pink" class="align-middle">
             {% with post=board.get_last_post %}
               {% if post %}
                 <small>
