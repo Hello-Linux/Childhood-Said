@@ -3,7 +3,7 @@
 First, clone the repository to your local machine:
 
 ```bash
-git clone git@github.com:sibtc/django-beginners-guide.git
+https://github.com/Hello-Linux/Childhood-Said
 ```
 
 Install the requirements:
