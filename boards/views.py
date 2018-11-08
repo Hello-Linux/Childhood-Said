@@ -7,8 +7,8 @@ from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.urls import reverse
 
-from .forms import NewTopicForm, PostForm
-from .models import Board, Post, Topic
+from boards.forms import NewTopicForm, PostForm
+from boards.models import Board, Post, Topic
 
 
 class BoardListView(ListView):
