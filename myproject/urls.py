@@ -8,6 +8,7 @@ from django.conf.urls import  include
 
 
 urlpatterns = [
+    url(r'^', include('favicon.urls')),
     url(r'^$', views.BoardListView.as_view(), name='home'),
     url(r'^signup/$', accounts_views.signup, name='signup'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),

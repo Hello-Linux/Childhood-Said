@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'widget_tweaks',
+    'favicon',
     'accounts',
     'boards',
 ]
@@ -99,9 +100,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
+FAVICON_PATH = STATIC_URL + 'img/favicon.ico'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'myproject/static'),
 ]
 
 LOGIN_URL = 'login'
