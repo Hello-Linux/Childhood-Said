@@ -19,17 +19,17 @@
     <tbody>
       {% for board in boards %}
         <tr>
-          <td bgcolor="pink">
+          <td>
             <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
             <small class="text-muted d-block">{{ board.description }}</small>
           </td>
-          <td bgcolor="pink" class="align-middle">
+          <td class="align-middle">
             {{ board.get_posts_count }}
           </td>
-          <td bgcolor="pink" class="align-middle">
+          <td class="align-middle">
             {{ board.topics.count }}
           </td>
-          <td bgcolor="pink" class="align-middle">
+          <td class="align-middle">
             {% with post=board.get_last_post %}
               {% if post %}
                 <small>
